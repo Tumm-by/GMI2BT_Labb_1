@@ -24,12 +24,12 @@ def guess_the_number(lower_limit = 1, upper_limit = 100):
             continue
         elif int(user_input) > target_number:
             print("%s är större än målet" % user_input)
-            if int(user_input) < upper_limit:
+            if int(user_input) < help_upper:
                 help_upper = int(user_input)
             continue
         elif int(user_input) < target_number:
             print("%s är mindre än målet" % user_input)
-            if int(user_input) > lower_limit:
+            if int(user_input) > help_lower:
                 help_lower = int(user_input)
             continue
     print("GRATTIS du har gissat rätt")
