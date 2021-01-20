@@ -12,10 +12,12 @@ def common_denoms(denom_1, denom_2, range_start = 1, range_end = 1001):
 def guess_the_number(lower_limit = 1, upper_limit = 100):
     from random import randint
     from math import trunc
+    
     target_number = randint(lower_limit, upper_limit)
     help_upper = upper_limit + 1 #Highest number the user has guessed
     help_lower = lower_limit - 1 #Lowest number the user has guessed
     user_input = ""
+    
     while (user_input != str(target_number)):
         user_input = input("Gissa talet. Talet är > %d och < %d \n" % (help_lower, help_upper)).strip()
         if not user_input.replace(".", "", 1).removeprefix("-").isnumeric(): #remove prefix requires python 3.9
